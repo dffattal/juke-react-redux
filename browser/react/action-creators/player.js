@@ -1,5 +1,8 @@
 import {START_PLAYING,STOP_PLAYING,SET_CURRENT_SONG,SET_LIST } from '../constants';
 import axios from "axios"
+import AUDIO from '../audio';
+import {skip} from '../utils'
+
 export const startPlaying = () => ({type: START_PLAYING});
 export const stopPlaying = () => ({type: STOP_PLAYING})
 export const setCurrentSong = (song) => ({type: SET_CURRENT_SONG, currentSong: song})
@@ -18,7 +21,7 @@ export const pause = () => dispatch => {
 export const load = (currentSong, currentSongList) => dispatch => {
   AUDIO.src = currentSong.audioUrl;
   AUDIO.load();
-  dispatch(setCurrentSongList(currentSongList));
+  dispatch(setList(currentSongList));
   dispatch(setCurrentSong(currentSong));
 };
 
@@ -30,11 +33,11 @@ export const startSong = (song, list) => dispatch => {
 
 export const toggle = () => (dispatch, getState) => {
   const { isPlaying } = getState().player;
-  if (isPlaying) dispatch(pause()); 
+  if (isPlaying) dispatch(pause());
   else dispatch(play());
 };
 
-export const toggleOne = (selectedSong, selectedSongList) => 
+export const toggleOne = (selectedSong, selectedSongList) =>
   (dispatch, getState) => {
     const { currentSong } = getState().player;
     if (selectedSong.id !== currentSong.id)
@@ -42,16 +45,16 @@ export const toggleOne = (selectedSong, selectedSongList) =>
     else dispatch(toggle());
 };
 
-export const next = () => 
+export const next = () =>
   (dispatch, getState) => {
     dispatch(startSong(...skip(1, getState().player)));
 };
 
-export const prev = () => 
+export const prev = () =>
   (dispatch, getState) => {
     dispatch(startSong(...skip(-1, getState().player)));
 };
-  
+
 
 
 export const fetchLyrics = function (artist, song) {

@@ -3979,6 +3979,12 @@ module.exports = React;
 /* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
+module.exports = __webpack_require__(136);
+
+/***/ }),
+/* 31 */
+/***/ (function(module, exports, __webpack_require__) {
+
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -4002,7 +4008,7 @@ module.exports = emptyObject;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 31 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4286,7 +4292,7 @@ module.exports = EventPluginHub;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 32 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4302,7 +4308,7 @@ module.exports = EventPluginHub;
 
 
 
-var EventPluginHub = __webpack_require__(31);
+var EventPluginHub = __webpack_require__(32);
 var EventPluginUtils = __webpack_require__(55);
 
 var accumulateInto = __webpack_require__(106);
@@ -4426,7 +4432,7 @@ module.exports = EventPropagators;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 33 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4479,7 +4485,7 @@ var ReactInstanceMap = {
 module.exports = ReactInstanceMap;
 
 /***/ }),
-/* 34 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4543,7 +4549,7 @@ SyntheticEvent.augmentClass(SyntheticUIEvent, UIEventInterface);
 module.exports = SyntheticUIEvent;
 
 /***/ }),
-/* 35 */
+/* 36 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4585,7 +4591,7 @@ var route = oneOfType([object, element]);
 var routes = oneOfType([route, arrayOf(route)]);
 
 /***/ }),
-/* 36 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4681,12 +4687,6 @@ var Songs = function Songs(props) {
 };
 
 exports.default = Songs;
-
-/***/ }),
-/* 37 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(136);
 
 /***/ }),
 /* 38 */
@@ -5382,7 +5382,7 @@ module.exports = ReactBrowserEventEmitter;
 
 
 
-var SyntheticUIEvent = __webpack_require__(34);
+var SyntheticUIEvent = __webpack_require__(35);
 var ViewportMetrics = __webpack_require__(105);
 
 var getEventModifierState = __webpack_require__(63);
@@ -7287,7 +7287,7 @@ module.exports = ReactErrorUtils;
 var _prodInvariant = __webpack_require__(4);
 
 var ReactCurrentOwner = __webpack_require__(14);
-var ReactInstanceMap = __webpack_require__(33);
+var ReactInstanceMap = __webpack_require__(34);
 var ReactInstrumentation = __webpack_require__(11);
 var ReactUpdates = __webpack_require__(13);
 
@@ -8583,7 +8583,7 @@ var _prodInvariant = __webpack_require__(22);
 var ReactNoopUpdateQueue = __webpack_require__(73);
 
 var canDefineProperty = __webpack_require__(75);
-var emptyObject = __webpack_require__(30);
+var emptyObject = __webpack_require__(31);
 var invariant = __webpack_require__(1);
 var warning = __webpack_require__(2);
 
@@ -8940,7 +8940,7 @@ var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _Songs = __webpack_require__(36);
+var _Songs = __webpack_require__(37);
 
 var _Songs2 = _interopRequireDefault(_Songs);
 
@@ -8972,7 +8972,7 @@ var Album = function (_React$Component) {
   }, {
     key: 'render',
     value: function render() {
-      var album = this.props.selectedAlbum;
+      var album = this.props.albums.currentAlbum;
       var currentSong = this.props.currentSong;
       var isPlaying = this.props.isPlaying;
       var toggleOne = this.props.toggleOne;
@@ -9025,7 +9025,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var Albums = function Albums(props) {
 
-  var albums = props.albums;
+  var albums = props.albums.albums;
   var selectAlbum = props.selectAlbum;
 
   return _react2.default.createElement(
@@ -10969,14 +10969,14 @@ var ReactDOMComponentTree = __webpack_require__(6);
 var ReactDOMContainerInfo = __webpack_require__(215);
 var ReactDOMFeatureFlags = __webpack_require__(217);
 var ReactFeatureFlags = __webpack_require__(99);
-var ReactInstanceMap = __webpack_require__(33);
+var ReactInstanceMap = __webpack_require__(34);
 var ReactInstrumentation = __webpack_require__(11);
 var ReactMarkupChecksum = __webpack_require__(237);
 var ReactReconciler = __webpack_require__(26);
 var ReactUpdateQueue = __webpack_require__(60);
 var ReactUpdates = __webpack_require__(13);
 
-var emptyObject = __webpack_require__(30);
+var emptyObject = __webpack_require__(31);
 var instantiateReactComponent = __webpack_require__(110);
 var invariant = __webpack_require__(1);
 var setInnerHTML = __webpack_require__(45);
@@ -12357,7 +12357,7 @@ function isPromise(obj) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_invariant__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__RouteUtils__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__PatternUtils__ = __webpack_require__(27);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__InternalPropTypes__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__InternalPropTypes__ = __webpack_require__(36);
 
 
 
@@ -13563,7 +13563,7 @@ var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _Songs = __webpack_require__(36);
+var _Songs = __webpack_require__(37);
 
 var _Songs2 = _interopRequireDefault(_Songs);
 
@@ -13651,7 +13651,7 @@ var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _axios = __webpack_require__(37);
+var _axios = __webpack_require__(30);
 
 var _axios2 = _interopRequireDefault(_axios);
 
@@ -13681,6 +13681,14 @@ var _Player = __webpack_require__(160);
 
 var _Player2 = _interopRequireDefault(_Player);
 
+var _store = __webpack_require__(167);
+
+var _store2 = _interopRequireDefault(_store);
+
+var _player = __webpack_require__(312);
+
+var _albums = __webpack_require__(314);
+
 var _utils = __webpack_require__(168);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -13701,7 +13709,7 @@ var AppContainer = function (_Component) {
 
     var _this = _possibleConstructorReturn(this, (AppContainer.__proto__ || Object.getPrototypeOf(AppContainer)).call(this, props));
 
-    _this.state = _initialState2.default;
+    _this.state = Object.assign({}, _initialState2.default, _store2.default.getState());
 
     _this.toggle = _this.toggle.bind(_this);
     _this.toggleOne = _this.toggleOne.bind(_this);
@@ -13721,7 +13729,13 @@ var AppContainer = function (_Component) {
     value: function componentDidMount() {
       var _this2 = this;
 
-      Promise.all([_axios2.default.get('/api/albums/'), _axios2.default.get('/api/artists/'), _axios2.default.get('/api/playlists')]).then(function (res) {
+      this.unsubscribe = _store2.default.subscribe(function () {
+        _this2.setState(_store2.default.getState());
+      });
+
+      _store2.default.dispatch((0, _albums.fetchAlbums)());
+
+      Promise.all([_axios2.default.get('/api/artists/'), _axios2.default.get('/api/playlists')]).then(function (res) {
         return res.map(function (r) {
           return r.data;
         });
@@ -13737,10 +13751,14 @@ var AppContainer = function (_Component) {
       });
     }
   }, {
+    key: 'componentWillUnmount',
+    value: function componentWillUnmount() {
+      this.unsubscribe();
+    }
+  }, {
     key: 'onLoad',
-    value: function onLoad(albums, artists, playlists) {
+    value: function onLoad(artists, playlists) {
       this.setState({
-        albums: (0, _utils.convertAlbums)(albums),
         artists: artists,
         playlists: playlists
       });
@@ -13748,51 +13766,42 @@ var AppContainer = function (_Component) {
   }, {
     key: 'play',
     value: function play() {
-      _audio2.default.play();
-      this.setState({ isPlaying: true });
+      _store2.default.dispatch((0, _player.play)());
     }
   }, {
     key: 'pause',
     value: function pause() {
-      _audio2.default.pause();
-      this.setState({ isPlaying: false });
+      _store2.default.dispatch((0, _player.pause)());
     }
   }, {
     key: 'load',
     value: function load(currentSong, currentSongList) {
-      _audio2.default.src = currentSong.audioUrl;
-      _audio2.default.load();
-      this.setState({
-        currentSong: currentSong,
-        currentSongList: currentSongList
-      });
+      _store2.default.dispatch((0, _player.load)(currentSong, currentSongList));
     }
   }, {
     key: 'startSong',
     value: function startSong(song, list) {
-      this.pause();
-      this.load(song, list);
-      this.play();
+      _store2.default.dispatch((0, _player.startSong)(song, list));
     }
   }, {
     key: 'toggleOne',
     value: function toggleOne(selectedSong, selectedSongList) {
-      if (selectedSong.id !== this.state.currentSong.id) this.startSong(selectedSong, selectedSongList);else this.toggle();
+      _store2.default.dispatch((0, _player.toggleOne)(selectedSong, selectedSongList));
     }
   }, {
     key: 'toggle',
     value: function toggle() {
-      if (this.state.isPlaying) this.pause();else this.play();
+      _store2.default.dispatch((0, _player.toggle)());
     }
   }, {
     key: 'next',
     value: function next() {
-      this.startSong.apply(this, _toConsumableArray((0, _utils.skip)(1, this.state)));
+      _store2.default.dispatch((0, _player.next)());
     }
   }, {
     key: 'prev',
     value: function prev() {
-      this.startSong.apply(this, _toConsumableArray((0, _utils.skip)(-1, this.state)));
+      _store2.default.dispatch((0, _player.prev)());
     }
   }, {
     key: 'setProgress',
@@ -13802,27 +13811,19 @@ var AppContainer = function (_Component) {
   }, {
     key: 'selectAlbum',
     value: function selectAlbum(albumId) {
-      var _this3 = this;
-
-      _axios2.default.get('/api/albums/' + albumId).then(function (res) {
-        return res.data;
-      }).then(function (album) {
-        return _this3.setState({
-          selectedAlbum: (0, _utils.convertAlbum)(album)
-        });
-      });
+      _store2.default.dispatch((0, _albums.fetchCurrentAlbum)(albumId));
     }
   }, {
     key: 'selectArtist',
     value: function selectArtist(artistId) {
-      var _this4 = this;
+      var _this3 = this;
 
       Promise.all([_axios2.default.get('/api/artists/' + artistId), _axios2.default.get('/api/artists/' + artistId + '/albums'), _axios2.default.get('/api/artists/' + artistId + '/songs')]).then(function (res) {
         return res.map(function (r) {
           return r.data;
         });
       }).then(function (data) {
-        return _this4.onLoadArtist.apply(_this4, _toConsumableArray(data));
+        return _this3.onLoadArtist.apply(_this3, _toConsumableArray(data));
       });
     }
   }, {
@@ -13838,13 +13839,13 @@ var AppContainer = function (_Component) {
   }, {
     key: 'addPlaylist',
     value: function addPlaylist(playlistName) {
-      var _this5 = this;
+      var _this4 = this;
 
       _axios2.default.post('/api/playlists', { name: playlistName }).then(function (res) {
         return res.data;
       }).then(function (playlist) {
-        _this5.setState({
-          playlists: [].concat(_toConsumableArray(_this5.state.playlists), [playlist])
+        _this4.setState({
+          playlists: [].concat(_toConsumableArray(_this4.state.playlists), [playlist])
         }, function () {
           _reactRouter.hashHistory.push('/playlists/' + playlist.id);
         });
@@ -13853,13 +13854,13 @@ var AppContainer = function (_Component) {
   }, {
     key: 'selectPlaylist',
     value: function selectPlaylist(playlistId) {
-      var _this6 = this;
+      var _this5 = this;
 
       _axios2.default.get('/api/playlists/' + playlistId).then(function (res) {
         return res.data;
       }).then(function (playlist) {
         playlist.songs = playlist.songs.map(_utils.convertSong);
-        _this6.setState({
+        _this5.setState({
           selectedPlaylist: playlist
         });
       });
@@ -13867,12 +13868,12 @@ var AppContainer = function (_Component) {
   }, {
     key: 'loadSongs',
     value: function loadSongs(songs) {
-      var _this7 = this;
+      var _this6 = this;
 
       _axios2.default.get('/api/songs').then(function (res) {
         return res.data;
       }).then(function (songs) {
-        _this7.setState({
+        _this6.setState({
           songs: songs
         });
       });
@@ -13880,21 +13881,21 @@ var AppContainer = function (_Component) {
   }, {
     key: 'addSongToPlaylist',
     value: function addSongToPlaylist(playlistId, songId) {
-      var _this8 = this;
+      var _this7 = this;
 
       return _axios2.default.post('/api/playlists/' + playlistId + '/songs', {
         id: songId
       }).then(function (res) {
         return res.data;
       }).then(function (song) {
-        var selectedPlaylist = _this8.state.selectedPlaylist;
-        var songs = _this8.state.selectedPlaylist.songs;
+        var selectedPlaylist = _this7.state.selectedPlaylist;
+        var songs = _this7.state.selectedPlaylist.songs;
         var newSongs = [].concat(_toConsumableArray(songs), [(0, _utils.convertSong)(song)]);
         var newSelectedPlaylist = Object.assign({}, selectedPlaylist, {
           songs: newSongs
         });
 
-        _this8.setState({
+        _this7.setState({
           selectedPlaylist: newSelectedPlaylist
         });
       });
@@ -13928,10 +13929,10 @@ var AppContainer = function (_Component) {
           this.props.children && _react2.default.cloneElement(this.props.children, props)
         ),
         _react2.default.createElement(_Player2.default, {
-          currentSong: this.state.currentSong,
-          currentSongList: this.state.currentSongList,
-          isPlaying: this.state.isPlaying,
-          progress: this.state.progress,
+          currentSong: this.state.player.currentSong,
+          currentSongList: this.state.player.currentSongList,
+          isPlaying: this.state.player.isPlaying,
+          progress: this.state.player.progress,
           next: this.next,
           prev: this.prev,
           toggle: this.toggle
@@ -14044,7 +14045,7 @@ var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _axios = __webpack_require__(37);
+var _axios = __webpack_require__(30);
 
 var _axios2 = _interopRequireDefault(_axios);
 
@@ -15080,7 +15081,7 @@ exports.fetchLyrics = exports.setLyrics = undefined;
 
 var _constants = __webpack_require__(47);
 
-var _axios = __webpack_require__(37);
+var _axios = __webpack_require__(30);
 
 var _axios2 = _interopRequireDefault(_axios);
 
@@ -15126,7 +15127,7 @@ var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _Songs = __webpack_require__(36);
+var _Songs = __webpack_require__(37);
 
 var _Songs2 = _interopRequireDefault(_Songs);
 
@@ -15310,7 +15311,7 @@ var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _axios = __webpack_require__(37);
+var _axios = __webpack_require__(30);
 
 var _axios2 = _interopRequireDefault(_axios);
 
@@ -15638,7 +15639,7 @@ var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _axios = __webpack_require__(37);
+var _axios = __webpack_require__(30);
 
 var _axios2 = _interopRequireDefault(_axios);
 
@@ -15757,7 +15758,7 @@ var _Artist = __webpack_require__(129);
 
 var _Artist2 = _interopRequireDefault(_Artist);
 
-var _Songs = __webpack_require__(36);
+var _Songs = __webpack_require__(37);
 
 var _Songs2 = _interopRequireDefault(_Songs);
 
@@ -15903,8 +15904,9 @@ exports.default = function () {
       newState.currentSong = action.currentSong;
       break;
 
-    // case SET_CURRENT_SONG:
-    // newState.currentSong = 
+    case _constants.SET_PROGRESS:
+      newState.progress = action.progress;
+      break;
 
     default:
       return state;
@@ -15950,11 +15952,16 @@ var _lyricsReducer = __webpack_require__(165);
 
 var _lyricsReducer2 = _interopRequireDefault(_lyricsReducer);
 
+var _albumsReducer = __webpack_require__(313);
+
+var _albumsReducer2 = _interopRequireDefault(_albumsReducer);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = (0, _redux.createStore)((0, _redux.combineReducers)({
     lyrics: _lyricsReducer2.default,
-    player: _playerReducer2.default
+    player: _playerReducer2.default,
+    albums: _albumsReducer2.default
 }), (0, _redux.applyMiddleware)((0, _reduxLogger.createLogger)(), _reduxThunk2.default));
 
 /***/ }),
@@ -18432,7 +18439,7 @@ module.exports = AutoFocusUtils;
 
 
 
-var EventPropagators = __webpack_require__(32);
+var EventPropagators = __webpack_require__(33);
 var ExecutionEnvironment = __webpack_require__(7);
 var FallbackCompositionState = __webpack_require__(208);
 var SyntheticCompositionEvent = __webpack_require__(251);
@@ -19037,8 +19044,8 @@ module.exports = CSSPropertyOperations;
 
 
 
-var EventPluginHub = __webpack_require__(31);
-var EventPropagators = __webpack_require__(32);
+var EventPluginHub = __webpack_require__(32);
+var EventPropagators = __webpack_require__(33);
 var ExecutionEnvironment = __webpack_require__(7);
 var ReactDOMComponentTree = __webpack_require__(6);
 var ReactUpdates = __webpack_require__(13);
@@ -19448,7 +19455,7 @@ module.exports = DefaultEventPluginOrder;
 
 
 
-var EventPropagators = __webpack_require__(32);
+var EventPropagators = __webpack_require__(33);
 var ReactDOMComponentTree = __webpack_require__(6);
 var SyntheticMouseEvent = __webpack_require__(42);
 
@@ -20072,7 +20079,7 @@ var React = __webpack_require__(29);
 var ReactComponentEnvironment = __webpack_require__(58);
 var ReactCurrentOwner = __webpack_require__(14);
 var ReactErrorUtils = __webpack_require__(59);
-var ReactInstanceMap = __webpack_require__(33);
+var ReactInstanceMap = __webpack_require__(34);
 var ReactInstrumentation = __webpack_require__(11);
 var ReactNodeTypes = __webpack_require__(103);
 var ReactReconciler = __webpack_require__(26);
@@ -20081,7 +20088,7 @@ if (process.env.NODE_ENV !== 'production') {
   var checkReactTypeSpec = __webpack_require__(260);
 }
 
-var emptyObject = __webpack_require__(30);
+var emptyObject = __webpack_require__(31);
 var invariant = __webpack_require__(1);
 var shallowEqual = __webpack_require__(48);
 var shouldUpdateReactComponent = __webpack_require__(66);
@@ -21101,7 +21108,7 @@ var DOMLazyTree = __webpack_require__(25);
 var DOMNamespaces = __webpack_require__(54);
 var DOMProperty = __webpack_require__(17);
 var DOMPropertyOperations = __webpack_require__(95);
-var EventPluginHub = __webpack_require__(31);
+var EventPluginHub = __webpack_require__(32);
 var EventPluginRegistry = __webpack_require__(40);
 var ReactBrowserEventEmitter = __webpack_require__(41);
 var ReactDOMComponentFlags = __webpack_require__(96);
@@ -24194,7 +24201,7 @@ module.exports = REACT_ELEMENT_TYPE;
 
 
 
-var EventPluginHub = __webpack_require__(31);
+var EventPluginHub = __webpack_require__(32);
 
 function runEventQueueInBatch(events) {
   EventPluginHub.enqueueEvents(events);
@@ -24432,7 +24439,7 @@ module.exports = ReactHostOperationHistoryHook;
 
 
 var DOMProperty = __webpack_require__(17);
-var EventPluginHub = __webpack_require__(31);
+var EventPluginHub = __webpack_require__(32);
 var EventPluginUtils = __webpack_require__(55);
 var ReactComponentEnvironment = __webpack_require__(58);
 var ReactEmptyComponent = __webpack_require__(98);
@@ -24571,7 +24578,7 @@ module.exports = ReactMarkupChecksum;
 var _prodInvariant = __webpack_require__(4);
 
 var ReactComponentEnvironment = __webpack_require__(58);
-var ReactInstanceMap = __webpack_require__(33);
+var ReactInstanceMap = __webpack_require__(34);
 var ReactInstrumentation = __webpack_require__(11);
 
 var ReactCurrentOwner = __webpack_require__(14);
@@ -26000,7 +26007,7 @@ module.exports = SVGDOMPropertyConfig;
 
 
 
-var EventPropagators = __webpack_require__(32);
+var EventPropagators = __webpack_require__(33);
 var ExecutionEnvironment = __webpack_require__(7);
 var ReactDOMComponentTree = __webpack_require__(6);
 var ReactInputSelection = __webpack_require__(101);
@@ -26200,7 +26207,7 @@ module.exports = SelectEventPlugin;
 var _prodInvariant = __webpack_require__(4);
 
 var EventListener = __webpack_require__(85);
-var EventPropagators = __webpack_require__(32);
+var EventPropagators = __webpack_require__(33);
 var ReactDOMComponentTree = __webpack_require__(6);
 var SyntheticAnimationEvent = __webpack_require__(249);
 var SyntheticClipboardEvent = __webpack_require__(250);
@@ -26211,7 +26218,7 @@ var SyntheticMouseEvent = __webpack_require__(42);
 var SyntheticDragEvent = __webpack_require__(252);
 var SyntheticTouchEvent = __webpack_require__(256);
 var SyntheticTransitionEvent = __webpack_require__(257);
-var SyntheticUIEvent = __webpack_require__(34);
+var SyntheticUIEvent = __webpack_require__(35);
 var SyntheticWheelEvent = __webpack_require__(258);
 
 var emptyFunction = __webpack_require__(12);
@@ -26599,7 +26606,7 @@ module.exports = SyntheticDragEvent;
 
 
 
-var SyntheticUIEvent = __webpack_require__(34);
+var SyntheticUIEvent = __webpack_require__(35);
 
 /**
  * @interface FocusEvent
@@ -26682,7 +26689,7 @@ module.exports = SyntheticInputEvent;
 
 
 
-var SyntheticUIEvent = __webpack_require__(34);
+var SyntheticUIEvent = __webpack_require__(35);
 
 var getEventCharCode = __webpack_require__(62);
 var getEventKey = __webpack_require__(264);
@@ -26771,7 +26778,7 @@ module.exports = SyntheticKeyboardEvent;
 
 
 
-var SyntheticUIEvent = __webpack_require__(34);
+var SyntheticUIEvent = __webpack_require__(35);
 
 var getEventModifierState = __webpack_require__(63);
 
@@ -27155,7 +27162,7 @@ var _prodInvariant = __webpack_require__(4);
 
 var ReactCurrentOwner = __webpack_require__(14);
 var ReactDOMComponentTree = __webpack_require__(6);
-var ReactInstanceMap = __webpack_require__(33);
+var ReactInstanceMap = __webpack_require__(34);
 
 var getHostComponentFromComposite = __webpack_require__(108);
 var invariant = __webpack_require__(1);
@@ -27734,7 +27741,7 @@ var IndexLink = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createClass({
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_invariant__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_invariant__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Redirect__ = __webpack_require__(116);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__InternalPropTypes__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__InternalPropTypes__ = __webpack_require__(36);
 
 
 
@@ -27793,7 +27800,7 @@ var IndexRedirect = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createClass({
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_invariant__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_invariant__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__RouteUtils__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__InternalPropTypes__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__InternalPropTypes__ = __webpack_require__(36);
 
 
 
@@ -27850,7 +27857,7 @@ var IndexRoute = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createClass({
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_invariant__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__RouteUtils__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__InternalPropTypes__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__InternalPropTypes__ = __webpack_require__(36);
 
 
 
@@ -27907,7 +27914,7 @@ var Route = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createClass({
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__createTransitionManager__ = __webpack_require__(120);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__InternalPropTypes__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__InternalPropTypes__ = __webpack_require__(36);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__RouterContext__ = __webpack_require__(71);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__RouteUtils__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__RouterUtils__ = __webpack_require__(117);
@@ -29401,7 +29408,7 @@ var ReactElement = __webpack_require__(21);
 var ReactPropTypeLocationNames = __webpack_require__(74);
 var ReactNoopUpdateQueue = __webpack_require__(73);
 
-var emptyObject = __webpack_require__(30);
+var emptyObject = __webpack_require__(31);
 var invariant = __webpack_require__(1);
 var warning = __webpack_require__(2);
 
@@ -30737,7 +30744,7 @@ var _assign = __webpack_require__(5);
 var ReactComponent = __webpack_require__(72);
 var ReactNoopUpdateQueue = __webpack_require__(73);
 
-var emptyObject = __webpack_require__(30);
+var emptyObject = __webpack_require__(31);
 
 /**
  * Base class helpers for the updating state of a component.
@@ -31974,6 +31981,204 @@ module.exports = function(module) {
 	return module;
 };
 
+
+/***/ }),
+/* 312 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.fetchLyrics = exports.prev = exports.next = exports.toggleOne = exports.toggle = exports.startSong = exports.load = exports.pause = exports.play = exports.setList = exports.setCurrentSong = exports.stopPlaying = exports.startPlaying = undefined;
+
+var _constants = __webpack_require__(47);
+
+var _axios = __webpack_require__(30);
+
+var _axios2 = _interopRequireDefault(_axios);
+
+var _audio = __webpack_require__(154);
+
+var _audio2 = _interopRequireDefault(_audio);
+
+var _utils = __webpack_require__(168);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
+var startPlaying = exports.startPlaying = function startPlaying() {
+  return { type: _constants.START_PLAYING };
+};
+var stopPlaying = exports.stopPlaying = function stopPlaying() {
+  return { type: _constants.STOP_PLAYING };
+};
+var setCurrentSong = exports.setCurrentSong = function setCurrentSong(song) {
+  return { type: _constants.SET_CURRENT_SONG, currentSong: song };
+};
+var setList = exports.setList = function setList(currentSongList) {
+  return { type: _constants.SET_LIST, currentSongList: currentSongList };
+};
+
+var play = exports.play = function play() {
+  return function (dispatch) {
+    _audio2.default.play();
+    dispatch(startPlaying());
+  };
+};
+
+var pause = exports.pause = function pause() {
+  return function (dispatch) {
+    _audio2.default.pause();
+    dispatch(stopPlaying());
+  };
+};
+
+var load = exports.load = function load(currentSong, currentSongList) {
+  return function (dispatch) {
+    _audio2.default.src = currentSong.audioUrl;
+    _audio2.default.load();
+    dispatch(setList(currentSongList));
+    dispatch(setCurrentSong(currentSong));
+  };
+};
+
+var startSong = exports.startSong = function startSong(song, list) {
+  return function (dispatch) {
+    dispatch(pause());
+    dispatch(load(song, list));
+    dispatch(play());
+  };
+};
+
+var toggle = exports.toggle = function toggle() {
+  return function (dispatch, getState) {
+    var isPlaying = getState().player.isPlaying;
+
+    if (isPlaying) dispatch(pause());else dispatch(play());
+  };
+};
+
+var toggleOne = exports.toggleOne = function toggleOne(selectedSong, selectedSongList) {
+  return function (dispatch, getState) {
+    var currentSong = getState().player.currentSong;
+
+    if (selectedSong.id !== currentSong.id) dispatch(startSong(selectedSong, selectedSongList));else dispatch(toggle());
+  };
+};
+
+var next = exports.next = function next() {
+  return function (dispatch, getState) {
+    dispatch(startSong.apply(undefined, _toConsumableArray((0, _utils.skip)(1, getState().player))));
+  };
+};
+
+var prev = exports.prev = function prev() {
+  return function (dispatch, getState) {
+    dispatch(startSong.apply(undefined, _toConsumableArray((0, _utils.skip)(-1, getState().player))));
+  };
+};
+
+var fetchLyrics = exports.fetchLyrics = function fetchLyrics(artist, song) {
+  return function (dispatch, getState) {
+    _axios2.default.get('/api/lyrics/' + artist + '/' + song).then(function (res) {
+      dispatch(setLyrics(res.data.lyric));
+    });
+  };
+};
+
+/***/ }),
+/* 313 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.initialAlbumsState = undefined;
+
+exports.default = function () {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialAlbumsState;
+  var action = arguments[1];
+
+
+  var newState = Object.assign({}, state);
+
+  switch (action.type) {
+
+    case _constants.RECEIVE_ALBUMS:
+      newState.albums = action.albums;
+      break;
+
+    case _constants.RECEIVE_ALBUM:
+      newState.currentAlbum = action.album;
+      break;
+
+    default:
+      return state;
+
+  }
+
+  return newState;
+};
+
+var _constants = __webpack_require__(47);
+
+var initialAlbumsState = exports.initialAlbumsState = {
+  albums: [],
+  currentAlbum: {}
+};
+
+/***/ }),
+/* 314 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.fetchCurrentAlbum = exports.fetchAlbums = exports.setCurrentAlbum = exports.setAlbums = undefined;
+
+var _constants = __webpack_require__(47);
+
+var _axios = __webpack_require__(30);
+
+var _axios2 = _interopRequireDefault(_axios);
+
+var _utils = __webpack_require__(168);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var setAlbums = exports.setAlbums = function setAlbums(albums) {
+  return { type: _constants.RECEIVE_ALBUMS, albums: albums };
+};
+
+var setCurrentAlbum = exports.setCurrentAlbum = function setCurrentAlbum(album) {
+  return { type: _constants.RECEIVE_ALBUM, album: album };
+};
+
+var fetchAlbums = exports.fetchAlbums = function fetchAlbums() {
+  return function (dispatch, getState) {
+    _axios2.default.get('/api/albums').then(function (res) {
+      dispatch(setAlbums((0, _utils.convertAlbums)(res.data)));
+    });
+  };
+};
+
+var fetchCurrentAlbum = exports.fetchCurrentAlbum = function fetchCurrentAlbum(albumId) {
+  return function (dispatch, getState) {
+    _axios2.default.get("/api/albums/" + albumId).then(function (res) {
+      dispatch(setCurrentAlbum((0, _utils.convertAlbum)(res.data)));
+    });
+  };
+};
 
 /***/ })
 /******/ ]);

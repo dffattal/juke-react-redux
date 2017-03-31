@@ -2,7 +2,8 @@ import {
   START_PLAYING,
   STOP_PLAYING,
   SET_CURRENT_SONG,
-  SET_LIST
+  SET_LIST,
+  SET_PROGRESS
 } from '../constants';
 
 export const initialPlayerState = {
@@ -30,11 +31,12 @@ export default function (state = initialPlayerState, action) {
       break;
 
     case SET_CURRENT_SONG:
-    newState.currentSong = action.currentSong;
-    break;
+      newState.currentSong = action.currentSong;
+      break;
 
-    // case SET_CURRENT_SONG:
-    // newState.currentSong = 
+    case SET_PROGRESS:
+      newState.progress = action.progress
+      break;
 
     default:
       return state;
